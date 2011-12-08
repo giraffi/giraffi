@@ -1,0 +1,22 @@
+[
+  {
+    "medium":{
+      "id":520,
+      "mediumtype":"email",
+      "name":"Incident ML",
+      "options":{
+        "address":"abc@example.com"
+      },
+      "user_id":726
+    }
+  },
+  {
+    "medium":{
+      "id":522,
+      "mediumtype":"twitter",
+      "name":"Tweat",
+      "options":{},
+      "user_id":726
+    }
+  }
+]

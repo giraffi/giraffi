@@ -1,0 +1,44 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://papi.giraffi.jp:443/axions.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 07 Dec 2011 06:22:25 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"056af88a43a043322c83b38f31d3925b"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      x-runtime:
+      - '0.016041'
+    body: ! '[{"axion":{"axiontype":"http_request","id":422,"name":"Post message to
+      the Convore","options":{"uri":"https://convore.com/api/topics/19099/messages/create.json","method":"post","header":{"content-type":"application/x-www-form-urlencoded","Authorization":"Basic
+      ****"},"body":{"message":"Post message by API"}},"user_id":726}},{"axion":{"axiontype":"http_request","id":423,"name":"Post
+      message to the Campfire","options":{"uri":"https://convore.com/api/topics/19099/messages/create.json","method":"post","header":{"content-type":"application/x-www-form-urlencoded","Authorization":"Basic
+      ****"},"body":{"message":"Post message by API"}},"user_id":726}}]'
+    http_version: '1.1'

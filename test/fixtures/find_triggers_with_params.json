@@ -1,0 +1,14 @@
+[
+  {
+    "trigger":{
+      "id":123,
+      "service_id": 110,
+      "triggertype":"traffic",
+      "options":{
+      "value":100000,
+      "operator":"<"
+      },
+      "axioninterval":180
+    }
+  }
+]

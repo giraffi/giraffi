@@ -1,0 +1,40 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://papi.giraffi.jp:443/items/3681/services.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 06 Dec 2011 06:50:24 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"7e7d5963e46def5eafce5e04d2bd912e"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      x-runtime:
+      - '0.020733'
+    body: ! '[{"service":{"id":17972,"item_id":3681,"normalinterval":300,"options":{},"servicetype":"ping","status":2,"warninginterval":180,"warningretry":5}}]'
+    http_version: '1.1'

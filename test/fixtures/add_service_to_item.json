@@ -1,0 +1,12 @@
+{
+  "service":{
+    "id":20470,
+    "item_id":3681,
+    "normalinterval":300,
+    "options":{},
+    "servicetype":"applog",
+    "status":1,
+    "warninginterval":180,
+    "warningretry":5
+  }
+}

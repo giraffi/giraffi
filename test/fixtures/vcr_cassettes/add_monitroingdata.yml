@@ -1,0 +1,36 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://okapi.giraffi.jp:3007/internal/nodelayed?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: ! '{"internal":{"service_id":"17972","servicetype":"load_average","value":"20","tags":["26cfa4e2-e493-44d7-8322-4f03b467b412"],"checked_at":"1323326945"}}'
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 201
+      message: Created
+    headers:
+      server:
+      - nginx
+      date:
+      - Thu, 08 Dec 2011 06:50:04 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      status:
+      - 201 Created
+      cache-control:
+      - no-cache
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      x-runtime:
+      - '0.096738'
+    body: ! '{"_id":"4ee05e1c2005893ce1158764","alert":false,"checked_at":1323326945,"compared_at":1323327004,"created_at":1323327004,"job_id":"c85eed00-0396-012f-6bef-5254000ab9a8","region":"internal","service_id":17972,"servicetype":"load_average","tags":["26cfa4e2-e493-44d7-8322-4f03b467b412"],"threshold":[],"user_id":726,"value":20.0}'
+    http_version: '1.1'

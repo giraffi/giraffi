@@ -1,0 +1,12 @@
+{
+  "service":{
+    "id":17972,
+    "item_id":3681,
+    "normalinterval":300,
+    "options":{},
+    "servicetype":"ping",
+    "status":2,
+    "warninginterval":180,
+    "warningretry":5
+  }
+}

@@ -1,0 +1,45 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://papi.giraffi.jp:443/logs/axion.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Thu, 08 Dec 2011 05:29:56 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"09fe886f4cca4d19f36d6fab647d1a50"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      x-runtime:
+      - '0.019162'
+    body: ! '[{"_id":"4edf0f3463051f062b000001","axion_id":422,"axion_name":"Post
+      message to the Convore","axion_options":{"uri":"https://convore.com/api/topics/19099/messages/create.json","method":"post","header":{"content-type":"application/x-www-form-urlencoded","Authorization":"Basic
+      ****"},"body":{"message":"Post message by API"}},"checked_at":1323241268,"created_at":1323241268,"executed_at":1323241268,"medium_name":[],"result":500,"user_id":726},{"_id":"4ee01c022325b409b10018f0","axion_id":425,"axion_name":"Alerting
+      Neo","axion_options":{},"checked_at":1323310082,"created_at":1323310082,"customkey":"26cfa4e2-e493-44d7-8322-4f03b467b412","executed_at":1323310082,"host":null,"ip":"210.152.137.27","item_name":"f4edede0-f719-012e-b8e4-002590346596","medium_name":["Tweat"],"result":true,"service_id":17972,"service_options":{},"servicetype":"ping","trigger_id":1150,"trigger_options":{"time":"3"},"triggertype":"timeout","user_id":726},{"_id":"4ee01dca63051f07910008a5","axion_id":425,"axion_name":"Alerting
+      Neo","axion_options":{},"checked_at":1323310538,"created_at":1323310538,"customkey":"26cfa4e2-e493-44d7-8322-4f03b467b412","executed_at":1323310538,"host":null,"ip":"210.152.137.27","item_name":"f4edede0-f719-012e-b8e4-002590346596","medium_name":["Tweat"],"result":true,"service_id":17972,"service_options":{},"servicetype":"ping","trigger_id":1150,"trigger_options":{"time":"3"},"triggertype":"timeout","user_id":726},{"_id":"4ee01dfa2325b409b600191f","axion_id":425,"axion_name":"Alerting
+      Neo","axion_options":{},"checked_at":1323310586,"created_at":1323310586,"customkey":"26cfa4e2-e493-44d7-8322-4f03b467b412","executed_at":1323310586,"host":null,"ip":"210.152.137.27","item_name":"f4edede0-f719-012e-b8e4-002590346596","medium_name":["Tweat"],"result":true,"service_id":17972,"service_options":{},"servicetype":"ping","trigger_id":1150,"trigger_options":{"time":"3"},"triggertype":"timeout","user_id":726}]'
+    http_version: '1.1'

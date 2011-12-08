@@ -1,0 +1,33 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://lapi.giraffi.jp:3443/applogs.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: ! '{"applog":{"level":"error","type":"app","time":"1323318027.9443982","message":"Internal
+      Server Error 500"}}'
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 201
+      message: Created
+    headers:
+      server:
+      - nginx
+      date:
+      - Thu, 08 Dec 2011 04:53:31 GMT
+      content-type:
+      - text/html;charset=utf-8
+      x-frame-options:
+      - sameorigin
+      x-xss-protection:
+      - 1; mode=block
+      content-length:
+      - '31'
+    body: ! '{"status":"Success to logging"}'
+    http_version: '1.1'

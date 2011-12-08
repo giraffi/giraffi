@@ -1,0 +1,85 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :put
+    uri: https://papi.giraffi.jp:443/media/522.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc&medium%5Boptions%5D%5Baddress%5D=foo@example.com
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 07 Dec 2011 04:42:44 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"99914b932bd37a50b983c5e7c90ae93b"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      set-cookie:
+      - _session_id=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlYmVmZjEzOGY0ZmMwMzFhZWViYjk1NDg1YmI3ZTg2NmVJIgpmbGFzaAY7AEZJQzolQWN0aW9uRGlzcGF0Y2g6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlSSIlTWVkaXVtIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4GOwBGBjoKQHVzZWRvOghTZXQGOgpAaGFzaHsA--ae9157d5b9113ac77ac9a17755eb3a87568650eb;
+        path=/; HttpOnly
+      x-runtime:
+      - '0.046913'
+    body: ! '{}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :put
+    uri: https://papi.giraffi.jp:443/media/522.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc&medium%5Boptions%5D%5Baddress%5D=foohoge@example.com
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 07 Dec 2011 04:49:27 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"99914b932bd37a50b983c5e7c90ae93b"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      set-cookie:
+      - _session_id=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlYzQ5MTViYTRlOTZlMjllMWM3MjJmYzlmMmNmYjE4NTdJIgpmbGFzaAY7AEZJQzolQWN0aW9uRGlzcGF0Y2g6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlSSIlTWVkaXVtIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4GOwBGBjoKQHVzZWRvOghTZXQGOgpAaGFzaHsA--69f48b78f56f4d87607404a015bb248c1e698ce7;
+        path=/; HttpOnly
+      x-runtime:
+      - '0.028862'
+    body: ! '{}'
+    http_version: '1.1'

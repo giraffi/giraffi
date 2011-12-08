@@ -1,0 +1,15 @@
+{
+  "item":{
+    "allowcopy":true,
+    "customkey":"6f76d596-e4c7-4b54-9afb-e2615c42d1aa",
+    "host":"",
+    "id":4089,
+    "ip":"210.152.137.59",
+    "name":"Locus Solus",
+    "normalinterval":300,
+    "status":2,
+    "user_id":726,
+    "warninginterval":180,
+    "warningretry":5
+  }
+}

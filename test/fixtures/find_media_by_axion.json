@@ -1,0 +1,13 @@
+[
+  {
+    "medium":{
+      "id":522,
+      "mediumtype":"email",
+      "name":"Tweat",
+      "options":{
+        "address":"foohoge@example.com"
+      },
+      "user_id":726
+    }
+  }
+]

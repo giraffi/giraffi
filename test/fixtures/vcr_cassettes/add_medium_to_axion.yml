@@ -1,0 +1,71 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :put
+    uri: https://papi.giraffi.jp:443/axions/422/media/522.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 411
+      message: Length Required
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 07 Dec 2011 06:40:31 GMT
+      content-type:
+      - text/html
+      content-length:
+      - '174'
+    body: ! "<html>\r\n<head><title>411 Length Required</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>411
+      Length Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :put
+    uri: https://papi.giraffi.jp:443/axions/425/media/522.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 07 Dec 2011 07:59:04 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"99914b932bd37a50b983c5e7c90ae93b"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      set-cookie:
+      - _session_id=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlMmE4YmY2Y2VmZTkxODNlY2U4YjE5MzhhYzQwNTQ3OGRJIgpmbGFzaAY7AEZJQzolQWN0aW9uRGlzcGF0Y2g6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlSSIlTWVkaXVtIHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4GOwBGBjoKQHVzZWRvOghTZXQGOgpAaGFzaHsA--c576ce19d0ddf194fb97ea580df45ccdc1106a0b;
+        path=/; HttpOnly
+      x-runtime:
+      - '0.055894'
+    body: ! '{}'
+    http_version: '1.1'

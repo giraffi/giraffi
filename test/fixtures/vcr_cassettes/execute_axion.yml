@@ -1,0 +1,85 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://papi.giraffi.jp:443/axions/422/execute.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 07 Dec 2011 07:01:07 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"5b3abf9c1aa7556c3a36fea4e695c5d2"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      set-cookie:
+      - _session_id=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlMDBkY2I1YzE3OGZmYmZiNTBkNDIxOTI1Y2M1ODQ5OWRJIgpmbGFzaAY7AEZJQzolQWN0aW9uRGlzcGF0Y2g6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlSSIZZXhlY3V0ZSBzdWNjZXNzZnVsbHkGOwBGBjoKQHVzZWRvOghTZXQGOgpAaGFzaHsA--445a3b8b5d6464a3ba2cd9a2f6d0585d2db30e7c;
+        path=/; HttpOnly
+      x-runtime:
+      - '0.031043'
+    body: ! '"OK"'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://papi.giraffi.jp:443/axions/425/execute.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Thu, 08 Dec 2011 06:16:40 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"5b3abf9c1aa7556c3a36fea4e695c5d2"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      set-cookie:
+      - _session_id=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlMzMwZTYwNWU1OTE2NmIyYTAxYjgxZTBkY2JlYzE1Y2NJIgpmbGFzaAY7AEZJQzolQWN0aW9uRGlzcGF0Y2g6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlSSIZZXhlY3V0ZSBzdWNjZXNzZnVsbHkGOwBGBjoKQHVzZWRvOghTZXQGOgpAaGFzaHsA--01307bd5fff9db576532d198ea3b34400901c8e4;
+        path=/; HttpOnly
+      x-runtime:
+      - '0.124164'
+    body: ! '"OK"'
+    http_version: '1.1'

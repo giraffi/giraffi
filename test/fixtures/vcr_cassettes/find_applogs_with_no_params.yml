@@ -1,0 +1,57 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://papi.giraffi.jp:443/applogs.json?apikey=wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc
+    body: !!null 
+    headers:
+      user-agent:
+      - Giraffi Ruby Gem 0.1.0
+      accept:
+      - application/json
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Thu, 08 Dec 2011 04:01:00 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      status:
+      - 200 OK
+      etag:
+      - ! '"d04c6c56e7f87006a994298796193c61"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      x-runtime:
+      - '0.019918'
+    body: ! '[{"applog":{"id":"4edd79d463051f073200002e","type":"app","level":"info","time":1317782732.9443982,"message":"Completed
+      200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms)Completed 200 OK in 12ms
+      (Views: 0.3ms | ActiveRecord: 4.3ms)"}},{"applog":{"id":"4ed87abd63051f0754000014","type":"app","level":"info","time":1317782732.9443982,"message":"Completed
+      200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms)Completed 200 OK in 12ms
+      (Views: 0.3ms | ActiveRecord: 4.3ms)"}},{"applog":{"id":"4ed879d92005892b8d00015b","type":"app","level":"info","time":1317782732.9443982,"message":"Completed
+      200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms)Completed 200 OK in 12ms
+      (Views: 0.3ms | ActiveRecord: 4.3ms)"}},{"applog":{"id":"4ed876e82005892b7f00011f","type":"app","level":"info","time":1322809064.0197775,"message":"Completed
+      200"}},{"applog":{"id":"4ed8732a2005892b730001d2","type":"app","level":"info","time":1317782732.9443982,"message":"Completed
+      200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms)Completed 200 OK in 12ms
+      (Views: 0.3ms | ActiveRecord: 4.3ms)"}},{"applog":{"id":"4ed8727b63051f0730000006","type":"app","level":"info","time":1317782732.9443982,"message":"Completed
+      200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms)Completed 200 OK in 12ms
+      (Views: 0.3ms | ActiveRecord: 4.3ms)"}},{"applog":{"id":"4ed872762005892b9300017c","type":"app","level":"info","time":1317782732.9443982,"message":"Completed
+      200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms)Completed 200 OK in 12ms
+      (Views: 0.3ms | ActiveRecord: 4.3ms)"}},{"applog":{"id":"4ed86f4163051f074100000a","type":"app","level":"info","time":1317898443.020834,"message":"Completed
+      200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms)Completed 200 OK in 12ms
+      (Views: 0.3ms | ActiveRecord: 4.3ms)"}}]
+
+'
+    http_version: '1.1'
