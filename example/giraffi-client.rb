@@ -145,7 +145,7 @@ count_axion_logs_options = {
 #pp giraffi.find_axion_logs(find_axion_logs_options) # with params
 #pp giraffi.find_axion_logs # without params
 #pp giraffi.count_axion_logs(count_axion_logs_options) # with params
-pp giraffi.count_axion_logs # without params
+#pp giraffi.count_axion_logs # without params
 
 # Monitoringdata
 find_monitoringdata_options = {
@@ -160,10 +160,10 @@ add_monitoringdata_options = {
 }
 #pp giraffi.find_monitoringdata(find_monitoringdata_options) # with params
 #pp giraffi.find_monitoringdata # without params
-pp giraffi.add_monitoringdata(add_monitoringdata_options)
+#pp giraffi.add_monitoringdata(add_monitoringdata_options)
 
 # MyCurrentStatus
-#pp giraffi.my_current_status('lapi')
+#pp giraffi.my_current_status()
 #pp giraffi.my_current_status('ghost')
 #pp giraffi.my_current_status()
 
@@ -172,13 +172,13 @@ pp giraffi.add_monitoringdata(add_monitoringdata_options)
 
 # Trends
 find_average_trends_options = {
-  service_id: "19838"
+  service_id: "17972"
 }
 find_failure_trends_options = {
-  service_id: "19838"
+  service_id: "17972"
 }
-#giraffi.find_average_trends(find_average_trends_options)
-#giraffi.find_failure_trends(find_failure_trends_options)
+pp giraffi.find_average_trends(find_average_trends_options)
+#pp giraffi.find_failure_trends(find_failure_trends_options)
 
 # Triggers
 find_triggers_options = {

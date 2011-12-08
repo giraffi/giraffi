@@ -9,12 +9,7 @@ module Giraffi
       # @params options [Hash] The request params to retrieve the desired trend data(average)
       # @return [HTTParty::Response]
       def find_average_trends(options={})
-        if options.is_a? Hash
-          query = to_query options
-          self.class.get("/trends/average.json?apikey=#{apikey}&#{query}")
-        else
-          self.class.get("/trends/average.json?apikey=#{apikey}")
-        end
+        self.class.get("/trends/average.json?apikey=#{apikey}", query: options)
       end
 
       # Returns the desired trend data(failure)
@@ -23,12 +18,7 @@ module Giraffi
       # @params options [Hash] The request params to retrieve the desired trend data(failure)
       # @return [HTTParty::Response]
       def find_failure_trends(options={})
-        if options.is_a? Hash
-          query = to_query options
-          self.class.get("/trends/failure.json?apikey=#{apikey}&#{query}")
-        else
-          self.class.get("/trends/failure.json?apikey=#{apikey}")
-        end
+        self.class.get("/trends/failure.json?apikey=#{apikey}", query: options)
       end
     end
   end

@@ -1,7 +1,7 @@
 require 'helper'
 
 class TestGiraffi < Test::Unit::TestCase
-  context "Testing Giraffi Ruby Gem a wrapper for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
     setup do
       @giraffi = Giraffi.new({:apikey => 'wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc'})
 
@@ -98,7 +98,7 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context 'Testing the API related to the items' do
+    context 'about the API related to the items' do
       should 'return successfully the desired items with no param' do
         stub_request(:get, "#{Giraffi.endpoint}/items.json?apikey=#{apikey}").
           with(headers: Giraffi.request_headers).
@@ -244,7 +244,7 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context 'Testing the API related to the services' do
+    context 'about the API related to the services' do
       should 'return successfully the desired services with no param' do
         stub_request(:get, "#{Giraffi.endpoint}/services.json?apikey=#{apikey}").
           with(:query => {}, headers: Giraffi.request_headers).
@@ -385,7 +385,7 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context 'Testing the API related to the media' do
+    context 'about the API related to the media' do
       should 'return successfully the desired media with no param' do
         stub_request(:get, "#{Giraffi.endpoint}/media.json?apikey=#{apikey}").
           with(headers: Giraffi.request_headers).
@@ -475,7 +475,7 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context 'Testing the API related to the axions' do
+    context 'about the API related to the axions' do
       should 'return successfully the desired axions with no param' do
         stub_request(:get, "#{Giraffi.endpoint}/axions.json?apikey=#{apikey}").
           with(headers: Giraffi.request_headers).
@@ -608,7 +608,7 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context 'Testing the API related to the triggers' do
+    context 'about the API related to the triggers' do
       should 'return successfully the desired triggers with no param' do
         stub_request(:get, "#{Giraffi.endpoint}/triggers.json?apikey=#{apikey}").
           with(headers: Giraffi.request_headers).
@@ -748,7 +748,7 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context 'Testing the API related to the applogs' do
+    context 'about the API related to the applogs' do
       should 'return successfully all applogs without no param' do
         stub_request(:get, "#{Giraffi.endpoint}/applogs.json?apikey=#{apikey}").
           with(headers: Giraffi.request_headers).
@@ -786,7 +786,7 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context 'Testing the API related to the axion logs' do
+    context 'about the API related to the axion logs' do
       should 'return successfully the logs related to the axions with no param' do
         stub_request(:get, "#{Giraffi.endpoint}/logs/axion.json?apikey=#{apikey}").
           with(headers: Giraffi.request_headers).
@@ -836,7 +836,7 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context 'Testing the API related to the monitoring data' do
+    context 'about the API related to the monitoring data' do
       should 'return successfully the desired monitoring data with no param' do
         stub_request(:get, "#{Giraffi.endpoint}/monitoringdata.json?apikey=#{apikey}").
           with(headers: Giraffi.request_headers).
@@ -873,11 +873,67 @@ class TestGiraffi < Test::Unit::TestCase
       end
     end
 
-    context '' do
-        #VCR.use_cassette('add_monitroingdata', record: :new_episodes) do
-        #  response = @giraffi.add_monitoringdata(@monitoringdata_attrs)
-        #  puts response
-        #end
+    context 'about the API related to the current status of the Giraffi API' do
+      should 'return the status related to the requested URI' do
+        stub_request(:get, "#{Giraffi.endpoint}/my_current_status.json").
+          with(headers: Giraffi.request_headers).
+          to_return(body: fixture("my_current_status_about_real_uri.json"))
+
+        giraffi = Giraffi.new({apikey: apikey})
+        response = giraffi.my_current_status('papi')
+        assert response.ok?
+        assert_equal JSON.parse(response.body)['my_current_status']['domain'], Giraffi.endpoint.sub(/https:\/\//,'')
+        assert JSON.parse(response.body)['my_current_status']['alive']
+      end
+
+      should 'not return the status related to the unknown URI' do
+        stub_request(:get, "#{Giraffi.endpoint}/my_current_status.json").
+          with(headers: Giraffi.request_headers).
+          to_return(body: fixture("my_current_status_about_real_uri.json"))
+
+        giraffi = Giraffi.new({apikey: apikey})
+        response = giraffi.my_current_status('ghost')
+        assert_equal JSON.parse(response)['my_current_status']['domain'], 'I am not here'
+        assert !JSON.parse(response)['my_current_status']['alive']
+      end
+    end
+
+    context 'about the API related to the regions' do
+      should 'return all the valid regions' do
+        stub_request(:get, "#{Giraffi.endpoint}/regions.json?apikey=#{apikey}").
+          with(headers: Giraffi.request_headers).
+          to_return(body: fixture('find_regions.json'))
+
+        giraffi = Giraffi.new({apikey: apikey})
+        response = giraffi.find_regions
+        assert response.ok?
+        assert_equal JSON.parse(response.body)[0]['region']['code'], "JP"
+      end
+    end
+
+    context 'about the API related to the trend data' do
+      should 'return the trend data about `average` related to the given service id' do
+        stub_request(:get, "#{Giraffi.endpoint}/trends/average.json?apikey=#{apikey}").
+          with(query: {service_id: @service_id.to_s},  headers: Giraffi.request_headers).
+          to_return(body: fixture('find_average_trends.json'))
+
+        giraffi = Giraffi.new({apikey: apikey})
+        response = giraffi.find_average_trends({service_id: @service_id.to_s})
+        assert response.ok?
+        assert_equal JSON.parse(response.body).size, 4
+      end
+
+      should 'return the trend data about `failure` related to the given service id' do
+        stub_request(:get, "#{Giraffi.endpoint}/trends/failure.json?apikey=#{apikey}").
+          with(query: {service_id: @service_id.to_s},  headers: Giraffi.request_headers).
+          to_return(body: fixture('find_failure_trends.json'))
+
+        giraffi = Giraffi.new({apikey: apikey})
+        response = giraffi.find_failure_trends({service_id: @service_id.to_s})
+        assert response.ok?
+        assert_equal JSON.parse(response.body).size, 2
+        assert_equal JSON.parse(response.body)[0]['failed_time'], 4515
+      end
     end
 
   end
