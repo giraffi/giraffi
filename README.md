@@ -12,7 +12,7 @@ A Ruby wrapper for the Giraffi API
 
 ## Usage
 
-### How to start ckecking a site status via HTTP.
+### How to start monitoring your web site status via HTTP
 
 1. Create a new Giraffi::Client object
 2. Create a medium
