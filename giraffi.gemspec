@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["azukiwasher"]
   s.date = "2011-12-09"
   s.description = "A Ruby wrapper for the Giraffi API"
-  s.email = "azukiwasher@higanworks.com"
+  s.email = "azukiwasher@yahoo.co.jp"
   s.extra_rdoc_files = [
     "LICENSE.md",
     "README.md"
@@ -108,7 +108,8 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<giraffi>, [">= 0"])
+      s.add_runtime_dependency(%q<multi_json>, [">= 1.0"])
+      s.add_runtime_dependency(%q<httparty>, [">= 0.8"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
@@ -121,7 +122,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<redcarpet>, [">= 0"])
       s.add_development_dependency(%q<yard>, [">= 0"])
     else
-      s.add_dependency(%q<giraffi>, [">= 0"])
+      s.add_dependency(%q<multi_json>, [">= 1.0"])
+      s.add_dependency(%q<httparty>, [">= 0.8"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 0"])
@@ -135,7 +137,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<yard>, [">= 0"])
     end
   else
-    s.add_dependency(%q<giraffi>, [">= 0"])
+    s.add_dependency(%q<multi_json>, [">= 1.0"])
+    s.add_dependency(%q<httparty>, [">= 0.8"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 0"])
