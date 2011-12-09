@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.version     = Giraffi::Version.to_s
   gem.platform    = Gem::Platform::RUBY
   gem.author      = "azukiwasher"
-  gem.email       = "azukiwasher@higanworks.com"
+  gem.email       = "azukiwasher@yahoo.co.jp"
   gem.homepage    = "http://github.com/giraffi/giraffi"
   gem.summary     = %q{Giraffi API wrapper}
   gem.description = %q{A Ruby wrapper for the Giraffi API.}
