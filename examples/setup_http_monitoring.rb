@@ -1,36 +1,11 @@
-# The Giraffi Ruby Gem
+dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
 
-A Ruby wrapper for the Giraffi API
-
-## Installation
-
-    gem install giraffi
-
-## Requirements
-* Ruby 1.9.2 or later
-* An apikey for the Giraffi API
-
-## Usage
-
-### How to start ckecking a site status via HTTP.
-
-1. Create a new Giraffi::Client object
-2. Create a medium
-3. Create an axion
-4. Add the medium you created to the axion
-5. Create an item
-6. Add a service to the item
-7. Add a trigger to the service
-8. Update the axion of the trigger
-9. Update the region of the service
-10. Reload the settings
-
-``` ruby
+require File.join(dir, 'giraffi')
 require 'json'
 require 'pp'
 
 # An `APIKEY` that allows you to access the Giraffi API
-APIKEY = 'hanamoguella'
+APIKEY = 'wtLTFEqCTX55Lvhtzlqw6doj5xuphemxJa707QXtDPc'
 
 # Sample attributes to create a `medium`
 medium_attrs = {
@@ -50,7 +25,7 @@ axion_attrs = {
 item_attrs = {
   name: "web01",
   host: "localhost",
-  ip: "127.0.0.1",
+  ip: "210.152.132.21",
   normalinterval: 120,
   warninginterval: 60,
   warningretry: 2,
@@ -111,4 +86,3 @@ pp g.update_region_of_service(service_id, "JP")
 # Reload the settings
 pp g.reload_items
 
-```

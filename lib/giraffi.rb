@@ -7,7 +7,7 @@ module Giraffi
   class << self
     # Alias for Giraffi::Client.new
     #
-    # @params options [Hash] The APIKEY allows you to access the Giraffi RESTful API
+    # @param options [Hash] The APIKEY allows you to access the Giraffi RESTful API
     # @return [Giraffi::Client]
     def new(options={})
       Giraffi::Client.new(options)

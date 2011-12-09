@@ -10,6 +10,7 @@ rescue Bundler::BundlerError => e
 end
 
 require 'test/unit'
+require 'json'
 require 'shoulda'
 require 'webmock/test_unit'
 require 'vcr'
@@ -36,5 +37,4 @@ def apikey
 end
 
 class Test::Unit::TestCase
-
 end

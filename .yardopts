@@ -1,0 +1,7 @@
+--no-private
+--protected
+--tag requires_apikey:"Requires APIKEY?"
+--markup markdown
+-
+HISTORY.md
+LICENSE.md

@@ -1,8 +1,6 @@
 require 'httparty'
 require 'multi_json'
-require 'addressable/uri'
 require 'giraffi/config'
-require 'pp'
 
 module Giraffi
   # Warpper for the Giraffi RESTful API
@@ -12,9 +10,8 @@ module Giraffi
     include HTTParty
     base_uri Config::DEFAULT_ENDPOINT
     headers Config::DEFAULT_REQUEST_HEADERS
-    format :plain
-    #format :json
-    debug_output
+    format :plain #:json
+    #debug_output
 
     # Requires client method modules
     require 'giraffi/client/items'
@@ -41,6 +38,7 @@ module Giraffi
     include Giraffi::Client::Trends
     include Giraffi::Client::Triggers
 
+    # @return [Array] the attributes +Config::VALID_OPTIONS_KEYS+ as a Array
     attr_accessor *Config::VALID_OPTIONS_KEYS
 
     # Examines a bad response and raise an appropriate error
@@ -64,15 +62,12 @@ module Giraffi
       end
     end
 
-    private
-    # Converts a hash object to a query string
+    # Returns the URL related to the given key
     #
-    # @param options [Hash] The request object to be converted to the query string
-    # @return [String] The query string
-    def to_query(options)
-      uri = Addressable::URI.new
-      uri.query_values = options
-      uri.query
+    # @param options [Symbol] The keyword related to the real URI
+    # @return [String] URI or nil when no matching value
+    def to_uri(key)
+      {papi: endpoint,okapi: monitoringdata_endpoint,lapi: applogs_endpoint}[key] || nil
     end
   end
 end
