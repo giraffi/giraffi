@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ItemsTest < Test::Unit::TestCase
-  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful API" do
     setup do
 
       @customkey = "26cfa4e2-e493-44d7-8322-4f03b467b412"

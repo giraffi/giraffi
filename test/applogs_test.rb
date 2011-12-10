@@ -3,7 +3,7 @@ require 'json'
 
 class ApplogsTest < Test::Unit::TestCase
 
-  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful API" do
     setup do
       @applog_attrs = {
         :level => "error",

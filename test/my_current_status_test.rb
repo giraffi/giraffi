@@ -2,7 +2,7 @@ require 'test_helper'
 require 'json'
 
 class MyCurrentStatusTest < Test::Unit::TestCase
-  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful API" do
 
     context 'about the API related to the current status of the Giraffi API' do
       should 'return the status related to the requested URI' do

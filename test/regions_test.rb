@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class RegionsTest < Test::Unit::TestCase
-  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful API" do
 
     context 'about the API related to the regions' do
       should 'return all the valid regions' do

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AxionsTest < Test::Unit::TestCase
-  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful API" do
     setup do
       @medium_id = '522'
       @axion_id = '425'

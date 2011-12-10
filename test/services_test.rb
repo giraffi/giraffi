@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ServicesTest < Test::Unit::TestCase
-  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful API" do
     setup do
       @item_id = 3681
       @service_id = 17972

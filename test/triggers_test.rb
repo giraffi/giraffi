@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TriggersGiraffi < Test::Unit::TestCase
-  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful API" do
     setup do
       @axion_id = '425'
       @trigger_id = '123'

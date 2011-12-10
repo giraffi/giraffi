@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class MonitoringdataTest < Test::Unit::TestCase
-  context "Testing Giraffi Ruby Gem for the Giraffi RESTful" do
+  context "Testing Giraffi Ruby Gem for the Giraffi RESTful API" do
     setup do
       @monitoringdata_attrs = {
         :service_id => "17972",
