@@ -19,7 +19,7 @@ Jeweler::Tasks.new do |gem|
   gem.license = "MIT"
   gem.summary = %Q{A Ruby wrapper for the Giraffi API}
   gem.description = %Q{A Ruby wrapper for the Giraffi API}
-  gem.email = "azukiwasher@higanworks.com"
+  gem.email = "azukiwasher@yahoo.co.jp"
   gem.authors = ["azukiwasher"]
   # dependencies defined in Gemfile
 end
