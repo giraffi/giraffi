@@ -25,7 +25,7 @@ axion_attrs = {
 item_attrs = {
   name: "web01",
   host: "localhost",
-  ip: "210.152.132.21",
+  ip: "127.0.0.1",
   normalinterval: 120,
   warninginterval: 60,
   warningretry: 2,
