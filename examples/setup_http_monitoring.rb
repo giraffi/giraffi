@@ -56,6 +56,7 @@ g = Giraffi.new({apikey: APIKEY})
 
 # Create a medium
 response = g.create_medium(medium_attrs)
+puts response.class
 medium_id = JSON.parse(response.body)['medium']['id']
 
 # Create an axion

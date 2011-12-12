@@ -10,6 +10,7 @@ class ClientTest < Test::Unit::TestCase
           "Accept" => "application/json",
           "Content-Type"  => "application/json"
         },
+        :timeout  => 10,
         :endpoint => "http://tumblr.com/",
         :monitoringdata_endpoint => "http://google.com/",
         :applogs_endpoint => "http://twitter.com",
