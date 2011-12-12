@@ -11,6 +11,9 @@ module Giraffi
       "Content-Type"  => "application/json"
     }
 
+    # The timeout for all HTTP calls if none is set in seconds
+    DEFAULT_TIMEOUT                 = 10
+
     # The basic endpoint if none is set
     DEFAULT_ENDPOINT                = 'https://papi.giraffi.jp'
 
@@ -26,6 +29,7 @@ module Giraffi
     # An array of valid keys in the options hash when configuring a {Giraffi::Client}
     VALID_OPTIONS_KEYS = [
       :request_headers,
+      :timeout,
       :endpoint,
       :monitoringdata_endpoint,
       :applogs_endpoint,
@@ -50,6 +54,7 @@ module Giraffi
     # Reset all configuration options to defaults
     def reset
       self.request_headers          = DEFAULT_REQUEST_HEADERS
+      self.timeout                  = DEFAULT_TIMEOUT
       self.endpoint                 = DEFAULT_ENDPOINT
       self.monitoringdata_endpoint  = DEFAULT_MONITORINGDATA_ENDPOINT
       self.applogs_endpoint         = DEFAULT_APPLOGS_ENDPOINT

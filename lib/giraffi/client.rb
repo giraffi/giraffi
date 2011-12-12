@@ -10,6 +10,7 @@ module Giraffi
     include HTTParty
     base_uri Config::DEFAULT_ENDPOINT
     headers Config::DEFAULT_REQUEST_HEADERS
+    default_timeout Config::DEFAULT_TIMEOUT
     format :plain #:json
     #debug_output
 
